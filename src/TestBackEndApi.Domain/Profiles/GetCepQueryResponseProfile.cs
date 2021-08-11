@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using TestBackEndApi.Domain.Queries.Cep.Get;
+using TestBackEndApi.Infrastructure.Data.Dto;
 using TestBackEndApi.Infrastructure.Services.Contract;
 
 namespace TestBackEndApi.Domain.Profiles

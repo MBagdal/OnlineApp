@@ -1,7 +1,10 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 using TestBackEndApi.Domain.Queries.Cep.Get;
+using TestBackEndApi.Infrastructure.Data.Dto;
 
 namespace TestBackEndApi.Api.Controllers
 {
@@ -10,19 +13,34 @@ namespace TestBackEndApi.Api.Controllers
     public class CepController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IMapper _mapper;
 
-        public CepController(IMediator mediator)
+        public CepController(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] GetCepQuery query)
         {
-            var response = await _mediator.Send(query);
-            if (response == null) return NotFound();
-            if (string.IsNullOrEmpty(response.Cep)) return BadRequest(response);
-            return Ok(response);
+            try
+            {
+                var response = await _mediator.Send(query);
+
+                if (response == null) return NotFound();
+
+                if (string.IsNullOrEmpty(response.Cep)) return BadRequest(response);
+
+                var responseDTO = _mapper.Map<CepResponseDTO>(response);
+
+                return Ok(responseDTO);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
     }
