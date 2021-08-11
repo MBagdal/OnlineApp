@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  testbackendapi.api:
+    image: ${DOCKER_REGISTRY-}testbackendapiapi
+    ports:
+      - 8888:80 
+    build:
+      context: .
+      dockerfile: TestBackEndApi.Api/Dockerfile

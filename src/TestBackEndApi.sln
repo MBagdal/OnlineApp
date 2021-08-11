@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBackEndApi.Domain", "Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBackEndApi.Infrastructure.CrossCutting.Configuration", "TestBackEndApi.Infrastructure.CrossCutting.Configuration\TestBackEndApi.Infrastructure.CrossCutting.Configuration.csproj", "{24CD875F-A39B-4D10-9C0B-63CCAA33234A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBackEndApi.Infrastructure.Ioc", "TextBackEndApi.Infrastructure.Ioc\TextBackEndApi.Infrastructure.Ioc.csproj", "{C7803DBF-0153-418C-960B-750315D47240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextBackEndApi.Infrastructure.Ioc", "TextBackEndApi.Infrastructure.Ioc\TextBackEndApi.Infrastructure.Ioc.csproj", "{C7803DBF-0153-418C-960B-750315D47240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBackEndApi.Infrastructure.Services", "TestBackEndApi.Infrastructure.Services\TestBackEndApi.Infrastructure.Services.csproj", "{4E25CE15-BD72-46C9-AD4E-9CC7EA6B0273}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBackEndApi.Infrastructure.Services", "TestBackEndApi.Infrastructure.Services\TestBackEndApi.Infrastructure.Services.csproj", "{4E25CE15-BD72-46C9-AD4E-9CC7EA6B0273}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4EF1D48B-3AC9-4AF0-B014-531F84666439}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{4E25CE15-BD72-46C9-AD4E-9CC7EA6B0273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E25CE15-BD72-46C9-AD4E-9CC7EA6B0273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E25CE15-BD72-46C9-AD4E-9CC7EA6B0273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF1D48B-3AC9-4AF0-B014-531F84666439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF1D48B-3AC9-4AF0-B014-531F84666439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF1D48B-3AC9-4AF0-B014-531F84666439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF1D48B-3AC9-4AF0-B014-531F84666439}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
