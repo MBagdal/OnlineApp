@@ -65,7 +65,6 @@ namespace TestBackEndApi.Api
 
 			services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IViaCepServiceClient, ViaCepServiceClient>();
-
         }
 
 
