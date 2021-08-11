@@ -8,9 +8,9 @@ docker compose up -d
 ```
 após terminar a execução, abra o navegador e acesse a seguinte url:
 
-```
+
 [http://localhost:8888/swagger/index.html](http://localhost:8888/swagger/index.html)
-```
+
 
 Na página web, informe o CEP e o tipo de retorno (JSON, XML)
 ## Contributing
