@@ -10,7 +10,8 @@ namespace TestBackEndApi.Domain.Profiles
         {
             CreateMap<CepResponse, GetCepQueryResponse>();
 			CreateMap<MensagemResponse, MensagemQueryResponse>();
-            CreateMap<GetCepQuery, CepRequest>();
+			CreateMap<GetCepQuery, CepRequest>();
+            CreateMap<CepResponse, GetCepQueryResponse>();
         }
     }
 }

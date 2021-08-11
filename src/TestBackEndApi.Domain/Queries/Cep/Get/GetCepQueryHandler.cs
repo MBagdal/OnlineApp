@@ -41,7 +41,7 @@ namespace TestBackEndApi.Domain.Queries.Cep.Get
                 results.Mensagens.Add(new MensagemResponse() { Mensagem = "Sucesso" });
             }
 
-            return _mapper.Map<GetCepQueryResponse>(results.Mensagens);
+            return _mapper.Map<GetCepQueryResponse>(results);
         }
     }
 }
