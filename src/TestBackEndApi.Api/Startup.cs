@@ -1,4 +1,5 @@
 using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,8 @@ using Microsoft.OpenApi.Models;
 using SimpleInjector;
 using System;
 using TestBackEndApi.Domain.Profiles;
+using TestBackEndApi.Infrastructure.Services.Interfaces;
+using TestBackEndApi.Infrastructure.Services.ServiceHandlers;
 
 namespace TestBackEndApi.Api
 {
@@ -59,6 +62,9 @@ namespace TestBackEndApi.Api
                     TermsOfService = new Uri("http://www.onlineapp.com.br")
                 });
             });
+
+			services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddScoped<IViaCepServiceClient, ViaCepServiceClient>();
 
         }
 
