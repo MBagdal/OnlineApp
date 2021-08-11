@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace TestBackEndApi.Infrastructure.Data.Dto
 {
@@ -16,11 +17,13 @@ namespace TestBackEndApi.Infrastructure.Data.Dto
 
 		public string Localidade { get; set; }
 
+		[XmlElement("mensagens")]
 		public List<MensagemQueryResponseDTO> Mensagens { get; set; }
 	}
 
 	public class MensagemQueryResponseDTO
 	{
+		[XmlElement("mensagem")]
 		public string Mensagem { get; set; }
 	}
 }

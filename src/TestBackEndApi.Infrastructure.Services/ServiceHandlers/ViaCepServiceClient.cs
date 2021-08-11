@@ -19,7 +19,9 @@ namespace TestBackEndApi.Infrastructure.Services.ServiceHandlers
                 var response = await _Client.GetAsync(_uri);
 
                 var result = response.Content.ReadAsStringAsync().Result;
-                return new CepResponse();
+
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<CepResponse>(result);
+
             }
             catch (Exception)
             {

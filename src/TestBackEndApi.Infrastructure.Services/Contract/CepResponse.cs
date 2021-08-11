@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace TestBackEndApi.Infrastructure.Services.Contract
 {
@@ -23,6 +24,7 @@ namespace TestBackEndApi.Infrastructure.Services.Contract
         public string Ddd { get; set; }
 
         public string Siafi { get; set; }
+
         public List<MensagemResponse> Mensagens { get; set; }
     }
 
