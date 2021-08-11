@@ -22,18 +22,20 @@ namespace TestBackEndApi.Api.Controllers
             _mapper = mapper;
         }
 
+
         [HttpGet("/{format}"), FormatFilter]
         public async Task<IActionResult> Get([FromQuery] GetCepQuery query)
         {
             try
             {
                 var response = await _mediator.Send(query);
+                var responseDTO = _mapper.Map<CepResponseDTO>(response);
 
                 if (response == null) return NotFound();
 
-                if (string.IsNullOrEmpty(response.Cep)) return BadRequest(response);
+                if (string.IsNullOrEmpty(response.Cep)) return BadRequest(responseDTO);
 
-                var responseDTO = _mapper.Map<CepResponseDTO>(response);
+                
                 
                 return Ok(responseDTO);
             }
