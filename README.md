@@ -16,7 +16,7 @@ após terminar a execução, abra o navegador e acesse a seguinte url:
 
 Na página atual, você encontrará 2 campos:
   * CEP: Digíte o cep de seu endereço.
-  * Format: 
+  * Format: Formato que a api rertonará
       * JSON
       * XML
 
